@@ -6,8 +6,134 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.drawer{
+  margin-right: 20%;
+}
+.cardHome{
+  margin: 0.5rem;
+  width:15rem;
+  border-radius: 10%;
+  box-sizing: border-box;
+  background-color: rgb(199, 231, 16);
+ 
+
+}
+.b{
+  box-sizing: unset;
+}
+
+.cardCol{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+
+
+.scrollCon{
+  margin: 2rem;
+  margin-top: 4rem;
+}
+
+
+.set{
+  display: inline;
+}
+ @media screen and (max-width:1000px) {
+ 
+  .set{
+    display:inline-block;
+    width: 100%;
+  }
+
+}
+.sideAndTable{
+  display: flex;
+  margin-top: 3rem;
+ }
+@media screen and (max-width:1000px) {
+ 
+ 
+   .sideAndTable{
+    display:block;
+    width: 90%;
+    margin-top: 3rem;
+   }
+
+}
+
+.scrollSide{
+  
+  padding: 3rem;
+    height: 600px;
+   
+   overflow-x: hidden;
+   overflow-y: auto;
+   
+}
+@media screen and (max-width:1000px) {
+ 
+  .scrollSide{
+  
+    padding: 3rem;
+      height: 600px;
+     width:80%;
+     display: flex;
+  
+  }
+
+}
+
+.question{
+  width:60%;
+}
+@media screen and (max-width:1000px) {
+ 
+  .question{
+    width:100%;
+  }
+}
+.tag{
+  width: 400px;
+  margin: 2rem;
+  background-color: red;
+}
+@media screen and (min-width:1300px) {
+ 
+  .tag{
+    width: 400px;
+    margin: 2rem;
+    background-color: red;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
