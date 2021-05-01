@@ -8,7 +8,7 @@ import Avatar from '@material-ui/core/Avatar';
 import ImageIcon from '@material-ui/icons/Image';
 import WorkIcon from '@material-ui/icons/Work';
 import BeachAccessIcon from '@material-ui/icons/BeachAccess';
-
+import {Link} from 'react-router-dom'
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
@@ -33,7 +33,7 @@ const MyListItem=()=> {
             <ImageIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Photos" secondary="Jan 9, 2014" />
+        <Link to='leetcode.com'>LinkdedList</Link>
       </ListItem>
       <ListItem>
         <ListItemAvatar>
@@ -41,7 +41,7 @@ const MyListItem=()=> {
             <WorkIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Work" secondary="Jan 7, 2014" />
+        <ListItemText primary="BackTracking" secondary="Intermediate" />
       </ListItem>
       <ListItem>
         <ListItemAvatar>
@@ -49,7 +49,7 @@ const MyListItem=()=> {
             <BeachAccessIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Vacation" secondary="July 20, 2014" />
+        <ListItemText primary="Dynamic Programming" secondary="Advance" />
       </ListItem>
     </List>
   );

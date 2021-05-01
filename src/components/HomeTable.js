@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles} from '@material-ui/core/styles';
+import { makeStyles,withStyles} from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableHead from '@material-ui/core/TableHead';
@@ -9,20 +9,25 @@ import TableFooter from '@material-ui/core/TableFooter';
 import TableRow from '@material-ui/core/TableRow';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+
 import questions from '../Data/questions'
 import TablePagination from '@material-ui/core/TablePagination';
-const useStyles2 = makeStyles({
+const useStyles2 = makeStyles((theme)=>({
   table: {
     width:'100%'
   },
-  tableMain:{
-    backgroundColor:'#757575',
-    color:'white'
+  head:{
+    backgroundColor:theme.palette.info.dark,
+    color:'#eceff1'
   },
   tableBody:{
-     backgroundColor:'#eeeeee'
+    background:'#f5f5f5'
   }
-});
+}));
+
+
+
+
 
 const HomeTable=(props)=> {
   const classes = useStyles2();
@@ -45,18 +50,18 @@ const HomeTable=(props)=> {
     <Grid item xs={12}>
       <Table className={classes.table} aria-label="custom pagination table">
       <TableHead>
-      <TableRow className={classes.tableMain}>
+      <TableRow className={classes.head}>
       
-      <TableCell style={{ width: '160' }} >
+      <TableCell style={{ width: '160',color:'white' }} >
                 Title
               </TableCell>
-              <TableCell style={{ width: '60px' }} align="right">
+              <TableCell style={{ width: '60px',color:'white' }} align="right">
                 Tags
               </TableCell>
-              <TableCell style={{ width: '60px' }} align="right">
+              <TableCell style={{ width: '60px',color:'white' }} align="right">
                 Difficulty
               </TableCell>
-              <TableCell style={{ width: '60px' }} align="right">
+              <TableCell style={{ width: '60px',color:'white' }} align="right">
                 Submissions
               </TableCell>
 
@@ -69,18 +74,18 @@ const HomeTable=(props)=> {
             ? questions.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
             : questions
           ).map((question,index) => (
-            <TableRow key={index} className={classes.tableBody}>
-              <TableCell style={{ width: '160px' }} component="th" scope="row">
+            <TableRow key={index} className={(index+1)%2==0&&classes.tableBody} >
+              <TableCell style={{ width: '160px',color:'#01579b' }} component="th" scope="row">
                 {question.title}
               </TableCell>
-              <TableCell style={{ width: '60px' }} align="center">
+              <TableCell style={{ width: '60px',color:'#01579b' }} align="right">
                 {question.tag}
               </TableCell>
-              <TableCell style={{ width: '60px' }} align="right">
+              <TableCell style={{ width: '60px',color:'#01579b' }} align="right">
                 {question.difficulty}
               </TableCell>
-              <TableCell style={{ width: '60px' }} align="right">
-                {question.submission}
+              <TableCell style={{ width: '60px',color:'#01579b' }} align="right">
+                {question.submissions}
               </TableCell>
             </TableRow>
           ))}
