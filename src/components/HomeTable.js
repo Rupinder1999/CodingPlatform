@@ -9,6 +9,7 @@ import TableFooter from '@material-ui/core/TableFooter';
 import TableRow from '@material-ui/core/TableRow';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import SearchBar from './SearchBar'
 
 import questions from '../Data/questions'
 import TablePagination from '@material-ui/core/TablePagination';
@@ -46,8 +47,9 @@ const HomeTable=(props)=> {
   };
  const rowsPerPageOptions=[10,15,25]
   return (
-    <Grid container  xs={12} lg={9}>
-    <Grid item xs={12}>
+    <Grid container  xs={12} lg={9} spacing={4}>
+    <SearchBar />
+    <Grid item xs={11}>
       <Table className={classes.table} aria-label="custom pagination table">
       <TableHead>
       <TableRow className={classes.head}>
@@ -96,7 +98,7 @@ const HomeTable=(props)=> {
         
       </Table>
       </Grid>
-      <Grid item sm={12}>
+      <Grid item sm={11}>
       <TablePagination 
         
         component="div"
